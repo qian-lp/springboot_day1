@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<!-- 
+	namespace: 指定当前mapper.xml管理的接口 全限定名
+	注意：一个mapper.xml只能管理一个接口
+-->
+<mapper namespace="com.baizhi.dao.ProductionDAO">
+
+    <select id="selectByPage" resultType="com.baizhi.entity.Production">
+           select * from production limit #{begin},#{rows}
+    </select>
+    <select id="select" resultType="com.baizhi.entity.Production">
+        select * from production where id=#{id}
+    </select>
+    <select id="selectCount" resultType="Integer">
+        select count(*) from production
+    </select>
+
+
+</mapper>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

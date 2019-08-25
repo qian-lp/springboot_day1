@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<!-- 
+	namespace: 指定当前mapper.xml管理的接口 全限定名
+	注意：一个mapper.xml只能管理一个接口
+-->
+<mapper namespace="com.baizhi.dao.EmpDAO">
+
+    <select id="selectAll" resultType="com.baizhi.entity.Emp">
+           select id,name,salary,age from emp
+    </select>
+    <delete id="delete">
+        delete from emp where id=#{id}
+    </delete>
+    <select id="selectOne" resultType="com.baizhi.entity.Emp">
+        select id,name,salary,age from emp where id=#{id}
+    </select>
+    <insert id="insert">
+        insert into emp values(#{id},#{name},#{salary},#{age})
+    </insert>
+    <update id="update" parameterType="com.baizhi.entity.Emp">
+        update emp set name=#{name},salary=#{salary},age=#{age} where id=#{id}
+    </update>
+
+
+</mapper>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
