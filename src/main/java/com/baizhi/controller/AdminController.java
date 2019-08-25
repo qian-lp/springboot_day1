@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 public class AdminController {
     @Autowired
     private AdminService adminService;
-
+    //修改了一下
     @RequestMapping("login")
     public String login(Admin admin) {
         Admin admin1 = adminService.query(admin.getName());
